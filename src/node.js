@@ -31,15 +31,8 @@ class Node {
 	}
 
 	remove() {
-		var tmp = this;
-		if (this.parent != null) {
-			if (this.left != null) 
-				this.removeChild(this.left);
-				if (this.right != null)
-					this.removeChild(this.right);
+		if (this.parent != null) 
 			this.parent.removeChild(this);
-		}
-		return tmp;
 	}
 
 	swapWithParent() {
