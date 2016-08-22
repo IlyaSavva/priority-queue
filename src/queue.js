@@ -16,8 +16,10 @@ class PriorityQueue {
 	}
 
 	shift() {
-
-	}
+		if (!this.isEmpty()) 
+			return this.heap.pop();
+		else throw new Error();
+	};
 
 	size() {
 		return this.heap.size();

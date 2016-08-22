@@ -85,6 +85,8 @@ class Node {
 			else {
 				brotherTmp = this.parent.left;
 				brotherTmp.parent = this;
+				this.parent.left = this.left;
+				this.parent.right = this.right;
 				this.left = brotherTmp;
 				this.right = this.parent;
 			}
@@ -96,7 +98,7 @@ class Node {
 			if (isLeftChild) 
 				this.left.parent = this;
 			else
-				this.left.parent = this;	
+				this.right.parent = this;	
 		}
 	}
 }

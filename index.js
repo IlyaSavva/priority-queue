@@ -4,7 +4,3 @@ const Queue = require('./src/queue');
 
 const h = new MaxHeap();
 window.h = h;
-
-
-
-
